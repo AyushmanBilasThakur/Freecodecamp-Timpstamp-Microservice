@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Timestamp App</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <center>    
+        <h1>Timestamp API: Microservice</h1>
+        <p>This is a simple API which will convert a passed date or timestamp to <span class="bold">UNIX</span> and <span class="bold">UTC</span> timings</p>
+
+        <h2>Just hit these endpoint:</h2>
+        <a href="/api/timestamp/2019-04-25">[project-url]/api/timestamp/2019-04-25</a>
+        <br>
+        <br>
+        <a href="/api/timestamp/1568711398368">[project-url]/api/timestamp/1568711398368</a>
+
+        <p>You can either pass timestamp or date in yyyy-mm-dd format. If you don't pass anything you will get current servertime in response</p>
+
+        <h2>Responses and errors</h2>
+        <p>If the date string is valid the api returns a JSON having the structure
+        {"unix": <date.getTime()>, "utc" : <date.toUTCString()> }
+        e.g. {"unix": 1479663089000 ,"utc": "Sun, 20 Nov 2016 17:31:29 GMT"}</p>
+        <p>If invalid then the response will be: {"error" : "Invalid Date" }.</p>
+    </center>
+</body>
+</html>
